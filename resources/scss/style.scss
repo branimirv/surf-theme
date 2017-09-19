@@ -1,5 +1,13 @@
+//global 
 @import "bootstrap";
 @import "mixins/bem";
 @import "config/variables";
 @import "config/mq";
 @import "config/global";
+@import "config/font-awesome";
+@import "config/fonts";
+@import "config/typography";
+
+//components
+@import "components/sidebar";
+@import "components/navigation";
