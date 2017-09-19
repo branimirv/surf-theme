@@ -3070,3 +3070,80 @@ img {
         line-height: 7.33;
         letter-spacing: 5.6px;
         color: rgba(11, 12, 17, 0.9); }
+
+.footer {
+  padding: 80px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%; }
+  .footer__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style-type: none; }
+    @media (max-width: 29.99em) {
+      .footer__list {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .footer__list li {
+      margin: 0 10px; }
+      .footer__list li a {
+        text-transform: uppercase;
+        font-size: 0.64285714rem;
+        font-family: LeagueSpartan;
+        line-height: 7.33;
+        letter-spacing: 5.6px;
+        color: rgba(11, 12, 17, 0.9); }
+  .footer__sm-icons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none; }
+    .footer__sm-icons li {
+      margin: 0 15px; }
+      .footer__sm-icons li .fa {
+        color: #ebebeb; }

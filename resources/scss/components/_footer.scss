@@ -1,0 +1,39 @@
+.footer {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include e('list') {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        @include mq($until: mobile) {
+            display: flex;
+            flex-direction: column;
+        }
+        li {
+            margin: 0 10px;
+            a {
+                text-transform: uppercase;
+                font-size: 0.64285714rem;
+                font-family: $navigation-font;
+                line-height: 7.33;
+                letter-spacing: 5.6px;
+                color: $navigation-color;
+            }
+        }
+    }
+    @include e('sm-icons') {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        li {
+            margin: 0 15px;
+            .fa {
+                color:#ebebeb;
+            }
+        }
+    }
+}
