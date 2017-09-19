@@ -16,4 +16,4 @@
 //=include init/init.js
 //=include components/app.js
 //=include components/content/content-controller.js
-//=include components/hamburger/hamburger-controller.js
+//=include components/navigation/navigation-controller.js

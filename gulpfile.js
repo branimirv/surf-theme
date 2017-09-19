@@ -101,11 +101,13 @@ gulp.task('watch', function() {
     gulp.watch(resources + 'js/*.js', ['scripts']);
     gulp.watch(resources + 'js/modules/*.js', ['scripts']);
     gulp.watch(resources + 'js/init/*.js', ['scripts']);
+    gulp.watch(resources + 'js/components/**/*.js', ['scripts']);
     // Watch .scss files
     gulp.watch(resources + 'scss/*.scss', ['sass']);
     gulp.watch(resources + 'scss/mixins/*.scss', ['sass']);
     gulp.watch(resources + 'scss/config/*.scss', ['sass']);
     gulp.watch(resources + 'scss/modules/*.scss', ['sass']);
+    gulp.watch(resources + 'scss/components/*.scss', ['sass']);
 });
 
 gulp.task('browserSync', function() {
@@ -116,15 +118,15 @@ gulp.task('browserSync', function() {
   })
 });
 
-gulp.task('fonts', function() {
-  return gulp.src('./node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('dist/fonts'))
-});
+// gulp.task('fonts', function() {
+//   return gulp.src('./node_modules/font-awesome/fonts/*')
+//     .pipe(gulp.dest('dist/fonts/font-awesome'))
+// });
 
 // default tasks
-gulp.task('dev', ['browserSync', 'scripts', 'sass', 'watch', 'fonts']);
+gulp.task('dev', ['browserSync', 'scripts', 'sass', 'watch'/*, 'fonts'*/]);
 
 
 // production tasks
-gulp.task('production', ['scripts-production', 'sass-production', 'fonts']);
+gulp.task('production', ['scripts-production', 'sass-production'/*, 'fonts'*/]);
 
