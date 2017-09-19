@@ -9,6 +9,7 @@ var uglify 			= require('gulp-uglify');
 var pump 			= require('pump');
 var rename          = require('gulp-rename');
 var browserSync     = require('browser-sync').create();
+var gutil = require('gulp-util');
 
 var resources 	= 'resources/';
 
@@ -87,10 +88,12 @@ gulp.task('sass-production', function() {
 });
 
 gulp.task('scripts-production', function() {
-    gulp.src(jsFiles)
-        .pipe(concat('script.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(destJS));
+  gulp.src(jsFiles)
+      .pipe(include())
+      .pipe(concat('script.min.js'))
+      .pipe(uglify())
+      .pipe(uglify().on('error', gutil.log))
+      .pipe(gulp.dest(destJS));
 });
 
 // ************************************************ //
@@ -118,15 +121,10 @@ gulp.task('browserSync', function() {
   })
 });
 
-// gulp.task('fonts', function() {
-//   return gulp.src('./node_modules/font-awesome/fonts/*')
-//     .pipe(gulp.dest('dist/fonts/font-awesome'))
-// });
-
 // default tasks
-gulp.task('dev', ['browserSync', 'scripts', 'sass', 'watch'/*, 'fonts'*/]);
+gulp.task('dev', ['browserSync', 'scripts', 'sass', 'watch']);
 
 
 // production tasks
-gulp.task('production', ['scripts-production', 'sass-production'/*, 'fonts'*/]);
+gulp.task('production', ['scripts-production', 'sass-production']);
 
