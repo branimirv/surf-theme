@@ -11,4 +11,7 @@
     @include e('sm-icons') {
         list-style-type: none;
     }
+    @include mq($until: wide) {
+        display: none;
+    }
 }

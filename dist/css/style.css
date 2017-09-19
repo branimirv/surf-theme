@@ -533,7 +533,7 @@
 
 body {
   position: relative;
-  font-size: 62.5%; }
+  font-size: 100%; }
 
 a {
   text-decoration: none; }
@@ -556,8 +556,9 @@ h4 {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
-.newline {
-  white-space: pre; }
+img {
+  height: auto;
+  max-width: 100%; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2973,6 +2974,9 @@ h4 {
     float: left; }
   .sidebar__sm-icons {
     list-style-type: none; }
+  @media (max-width: 74.99em) {
+    .sidebar {
+      display: none; } }
 
 .cls-1 {
   fill: #5da8ef;
@@ -2998,13 +3002,15 @@ h4 {
       -ms-flex-pack: justify;
       justify-content: space-between; } }
   .navigation__logo {
-    width: 20%; }
+    width: 20%;
+    z-index: 4; }
   .navigation__hamburger {
     display: none; }
     @media (max-width: 47.99em) {
       .navigation__hamburger {
         display: block;
-        cursor: pointer; } }
+        cursor: pointer;
+        z-index: 4; } }
   .navigation__list {
     width: 80%;
     display: -webkit-box;
@@ -3018,6 +3024,40 @@ h4 {
     -ms-flex-align: center;
     align-items: center;
     list-style-type: none; }
+    @media (max-width: 47.99em) {
+      .navigation__list--active {
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -moz-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        z-index: 3;
+        overflow: hidden; } }
     @media (max-width: 47.99em) {
       .navigation__list {
         display: none; } }

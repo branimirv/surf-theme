@@ -1,4 +1,9 @@
-app.controller('navigation',['$scope', function($scope){
-    $scope.item = 123;
-    console.log($scope.item)
+app.controller('navigation', ['$scope', function($scope){
+    $scope.toggle = false;
+}]);
+
+app.filter('trustHtml',['$sce', function($sce){
+    return function(html){
+      return $sce.trustAsHtml(html)
+    }
 }]);

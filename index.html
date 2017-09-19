@@ -2,23 +2,26 @@
 <html>
 <head>
 	<title>Surf Theme</title>
-	<link rel="stylesheet" href="dist/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/style.css">
 </head>
-<body ng-app="surfThemeApp" ng-controller="content">
+<body ng-app="surfThemeApp" ng-controller="content" ng-class="{'body__mobile' : toggle}">
   <div class="container">
       
-    <div class="navigation" ng-cloak>
+    <div class="navigation" ng-controller="navigation" ng-cloak>
       <div class="navigation__logo">
-        <svg preserveAspectRatio="xMidYMid" width="16" height="44" viewBox="0 0 16 44">
-          <path d="M8.000,-0.000 C5.679,-0.000 -0.000,7.211 -0.000,20.581 C-0.000,34.088 4.966,43.244 5.178,43.626 L5.384,44.000 L10.616,44.000 L10.822,43.626 C11.033,43.244 16.000,34.088 16.000,20.581 C16.000,7.211 10.321,-0.000 8.000,-0.000 ZM9.733,42.580 L8.727,42.580 L8.727,37.613 L7.273,37.613 L7.273,42.580 L6.267,42.580 C5.612,41.264 3.452,36.550 2.262,29.743 C3.376,31.407 5.063,33.184 7.628,34.675 C10.451,36.315 11.131,38.370 11.273,38.960 C10.607,40.754 10.023,41.999 9.733,42.580 ZM11.974,36.925 C11.361,35.866 10.281,34.563 8.373,33.454 C2.629,30.117 1.722,25.274 1.595,24.298 C1.534,23.460 1.497,22.598 1.478,21.719 C2.519,23.604 4.363,25.757 7.639,27.583 C12.312,30.189 13.098,32.768 13.112,32.814 C12.755,34.333 12.364,35.711 11.974,36.925 ZM8.361,26.339 C1.504,22.516 1.588,17.032 1.594,17.032 L1.593,17.032 C2.308,7.806 5.617,3.327 7.273,1.884 L7.273,24.129 L8.727,24.129 L8.727,1.884 C10.589,3.506 14.545,9.404 14.545,20.581 C14.545,24.310 14.144,27.713 13.570,30.684 C12.728,29.515 11.180,27.912 8.361,26.339 Z" class="cls-1"/>
-        </svg>
+        <a href="/">
+          <svg preserveAspectRatio="xMidYMid" width="16" height="44" viewBox="0 0 16 44">
+              <path d="M8.000,-0.000 C5.679,-0.000 -0.000,7.211 -0.000,20.581 C-0.000,34.088 4.966,43.244 5.178,43.626 L5.384,44.000 L10.616,44.000 L10.822,43.626 C11.033,43.244 16.000,34.088 16.000,20.581 C16.000,7.211 10.321,-0.000 8.000,-0.000 ZM9.733,42.580 L8.727,42.580 L8.727,37.613 L7.273,37.613 L7.273,42.580 L6.267,42.580 C5.612,41.264 3.452,36.550 2.262,29.743 C3.376,31.407 5.063,33.184 7.628,34.675 C10.451,36.315 11.131,38.370 11.273,38.960 C10.607,40.754 10.023,41.999 9.733,42.580 ZM11.974,36.925 C11.361,35.866 10.281,34.563 8.373,33.454 C2.629,30.117 1.722,25.274 1.595,24.298 C1.534,23.460 1.497,22.598 1.478,21.719 C2.519,23.604 4.363,25.757 7.639,27.583 C12.312,30.189 13.098,32.768 13.112,32.814 C12.755,34.333 12.364,35.711 11.974,36.925 ZM8.361,26.339 C1.504,22.516 1.588,17.032 1.594,17.032 L1.593,17.032 C2.308,7.806 5.617,3.327 7.273,1.884 L7.273,24.129 L8.727,24.129 L8.727,1.884 C10.589,3.506 14.545,9.404 14.545,20.581 C14.545,24.310 14.144,27.713 13.570,30.684 C12.728,29.515 11.180,27.912 8.361,26.339 Z" class="cls-1"/>
+            </svg>
+        </a>
       </div>
-      <div class="navigation__hamburger" ng-controller="navigation">
-        <svg id="Capa_1" x="0px" y="0px" width="25" height="25" viewBox="0 0 73.168 73.168" style="enable-background:new 0 0 73.168 73.168;" xml:space="preserve">
+      <div class="navigation__hamburger">
+        <svg ng-click="toggle = !toggle" id="Capa_1" x="0px" y="0px" width="25" height="25" viewBox="0 0 73.168 73.168" style="enable-background:new 0 0 73.168 73.168;" xml:space="preserve">
           <path d="M4.242,14.425h64.684c2.344,0,4.242-1.933,4.242-4.324c0-2.385-1.898-4.325-4.242-4.325H4.242 C1.898,5.776,0,7.716,0,10.101C0,12.493,1.898,14.425,4.242,14.425z M68.926,32.259H4.242C1.898,32.259,0,34.2,0,36.584 c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.933,4.242-4.325C73.168,34.2,71.27,32.259,68.926,32.259z M68.926,58.742H4.242C1.898,58.742,0,60.683,0,63.067c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.935,4.242-4.325 C73.168,60.683,71.27,58.742,68.926,58.742z"/>
         </svg>
       </div>
-      <ul class="navigation__list">
+      <ul class="navigation__list" ng-class="{'navigation__list--active' : toggle}">
         <li><a href="#">Stories</a></li>
         <li><a href="#">Events</a></li>
         <li><a href="#">Places</a></li>
@@ -31,7 +34,7 @@
         <div class="hero-slider__center">
           <p class="intro">{{ data.hero[0].intro }}</p>
           <h1>{{ data.hero[0].title }}</h1>
-          <p class="description newline">{{ data.hero[0].description }}</p> 
+          <p class="description" ng-bind-html="data.hero[0].description | trustHtml"></p> 
         </div>
         <div class="hero-slider__bottom">
           <div class="back">left</div>
@@ -45,7 +48,7 @@
     </div>
 
     <div class="qoute" ng-cloak>
-      <h4 class="qoute__description newline">{{ data.qoute[0].description }}</h4>
+      <h4 class="qoute__description" ></h4>
       <p class="qoute__author">{{ data.qoute[0].author }}</p>
       <div class="qoute__vline"></div>
     </div>
@@ -53,7 +56,7 @@
     <div class="media" ng-cloak>
       <div class="media__photo">
         <img class="media__img" ng-src=" {{ data.media[0].image }} ">
-        <p class="media__description newline">{{ data.media[0].description }}</p>
+        <p class="media__description" ng-bind-html="data.media[0].description | trustHtml"></p>
         <button class="media__button">Read more</button>
       </div>
       <div class="media__video"></div> 
@@ -76,9 +79,9 @@
   <div class="container">
     <div class="article-one" ng-cloak>
       <div class="article-one__left">
-        <p class="article-two__number">01</p>
+        <p class="article-one__number">01</p>
         <h2 class="article-one__title">{{ data.article1[0].title }}</h2>
-        <p class="article-one__description newline">{{ data.article1[0].description }}</p>
+        <p class="article-one__description" ng-bind-html="data.article1[0].description | trustHtml"></p>
         <button class="article-one__button">Read More</button>
       </div>
       <div class="article-one__right">
@@ -90,7 +93,7 @@
       <div class="article-two__left">
           <p class="article-two__number">02</p> 
           <h2 class="article-two__title">{{ data.article2[0].title }}</h2>
-          <p class="article-two__description newline">{{ data.article2[0].description }}</p>
+          <p class="article-two__description" ng-bind-html="data.article2[0].description | trustHtml"></p>
           <button class="article-two__button">Read More</button>
         </div>
         <div class="article-two__right">
@@ -102,7 +105,7 @@
 
     <div class="subscribe" ng-cloak>
       <h2 class="subscribe__title">{{ data.subscribe[0].title }}</h2>
-      <div class="subscribe__description newline">{{ data.subscribe[0].description }}</div>
+      <div class="subscribe__description" ng-bind-html="data.subscribe[0].description | trustHtml"></div>
       <div class="subscribe__input"></div>  
     </div>
   </div>
@@ -113,7 +116,7 @@
     </div>
     <div class="contact__right">
       <p class="contact__title">{{ data.contact[0].title }}</p>
-      <h3 class="contact__address newline">{{ data.contact[0].address }}</h3>
+      <h3 class="contact__address" ng-bind-html="data.contact[0].address | trustHtml"></h3>
       <button class="contact__button">Get in touch</button>
     </div>
   </div>

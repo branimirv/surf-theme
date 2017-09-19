@@ -4,3 +4,9 @@ app.controller('content',['$scope', '$http', function($scope, $http){
         $scope.data = response.data;
     });
 }]);
+
+app.filter('trustHtml',['$sce', function($sce){
+    return function(html){
+      return $sce.trustAsHtml(html)
+    }
+}]);

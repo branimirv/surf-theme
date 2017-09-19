@@ -6,7 +6,7 @@
 
 body {
     position: relative;
-    font-size: 62.5%;
+    font-size: 100%;
 }
 
 a {
@@ -38,6 +38,7 @@ h4 {
     display: none !important;
 }
 
-.newline {
-    white-space: pre;
+img {
+    height: auto;
+    max-width: 100%;
 }
