@@ -1,0 +1,14 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 200px;
+    @include e('text') {
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+        float: left;
+    }
+    @include e('sm-icons') {
+        list-style-type: none;
+    }
+}
