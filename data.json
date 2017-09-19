@@ -1,0 +1,82 @@
+{
+	"hero": [{
+		"intro": "Your",
+		"title": "Beautiful Escape",
+		"description": "One of the greatest things about the sport of surfing\nis that you need only three things: your body,\na surfboard, and a wave.",
+		"image": "./dist/images/hero.png"
+	}],
+	"qoute": [{
+		"description": "Surfing is the most blissful experience you can have\non this planet, a taste of heaven.",
+		"author": "John McCarthy"
+	}],
+	"media": [{
+		"image": "./dist/images/media1.png",
+		"description": "By better understanding the various aspects of\nsurfing, you will improve faster and have more\n fun in the water.",
+		"video": "./dist/images/media2.png"
+	}],
+	"surfshop": [{
+		"title": "Shop",
+		"product": "Surfboards",
+		"items": [{
+				"id": 1,
+				"image": "./dist/images/board1.png",
+				"category": "Funboards",
+				"title": "Chilli Rare Bird",
+				"price": "$890"
+			},
+			{
+				"id": 2,
+				"image": "./dist/images/board2.png",
+				"category": "Surfboards",
+				"title": "Emery NEM XF",
+				"price": "$950"
+			},
+			{
+				"id": 3,
+				"image": "./dist/images/board3.png",
+				"category": "Funboards",
+				"title": "Agency GROM",
+				"price": "$670"
+			},
+			{
+				"id": 4,
+				"image": "./dist/images/board1.png",
+				"category": "Funboards",
+				"title": "Agency GROM",
+				"price": "$670"
+			},
+			{
+				"id": 5,
+				"image": "./dist/images/board2.png",
+				"category": "Surfboards",
+				"title": "Emery NEM XF",
+				"price": "$950"
+			},
+			{
+				"id": 6,
+				"image": "./dist/images/board3.png",
+				"category": "Surfboards",
+				"title": "Emery NEM XF",
+				"price": "$950"
+			}]
+	}],
+	"article1": [{
+		"image": "./dist/images/article1.png",
+		"title": "Surf Training",
+		"description": "By better understanding the various aspects of\nsurfing, By better understanding the various\naspects of surfing, you will improve faster and\nhave more fun in the water."
+	}],
+	"article2": [{
+		"image": "./dist/images/article2.png",
+		"title": "Point Break",
+		"description": "By better understanding the various aspects of\nsurfing, By better understanding the various\naspects of surfing, you will improve faster and\nhave more fun in the water."
+	}],
+	"subscribe": [{
+		"title": "Join the Club",
+		"description": "By better understanding the various aspects of surfing, you will improve faster\nand have more fun in the water."
+	}],
+	"contact": [{
+		"image": "./dist/images/contact.png",
+		"title": "Our Camp",
+		"address": "CA 91932, USA\nImperial Beach\n560 Silver Strand Blvd"
+	}]
+}

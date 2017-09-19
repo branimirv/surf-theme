@@ -7,9 +7,13 @@
 //=include ../../node_modules/bootstrap/js/tooltip.js
 //=include ../../node_modules/bootstrap/js/popover.js
 //=include ../../node_modules/bootstrap/js/dropdown.js
+//=include ../../node_modules/angular/angular.js
 
 
 
 /*INCLUDES FROM resources*/
 
-/*//=include modules/table-calculation.js */
+//=include init/init.js
+//=include components/app.js
+//=include components/content/content-controller.js
+//=include components/hamburger/hamburger-controller.js
