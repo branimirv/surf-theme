@@ -3,13 +3,16 @@
 @import "mixins/bem";
 @import "config/variables";
 @import "config/mq";
-@import "config/global";
 @import "config/font-awesome";
 @import "config/fonts";
 @import "config/typography";
 @import "config/colors";
+@import "config/global";
 
 //components
-@import "components/sidebar";
 @import "components/navigation";
+@import "components/hero-slider";
+@import "components/qoute";
+@import "components/media";
+@import "components/sidebar";
 @import "components/footer";

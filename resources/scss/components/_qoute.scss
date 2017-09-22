@@ -1,0 +1,32 @@
+.qoute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    @include e('description') {
+        line-height: 1.46;
+        letter-spacing: 0.3px;
+        font-family: 'Playfair Display';
+        text-align: center;
+        margin-bottom: 30px;
+        color: rgba(51, 51, 51, 0.9);
+        opacity: 0.9;
+    }
+    @include e('author') {
+        opacity: 0.9;  
+        margin-bottom: 30px;
+        font-family: LeagueSpartan;
+        font-size: 9px;
+        font-weight: bold;
+        line-height: 7.33;
+        letter-spacing: 5.4px;
+        color: rgba(51, 51, 51, 0.9);
+        text-transform: uppercase;
+    }
+    @include e('vline') {
+        width: 2px;
+        height: 100px;
+        background-color: $vertical-line;
+    }
+}
