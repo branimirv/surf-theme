@@ -1,12 +1,17 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+.body {
     position: relative;
-    font-size: 100%;
+    font-size: 62.5%;
+    overflow: auto;
+    @include e('overflow') {
+        overflow: hidden;
+    }
 }
 
 a {
@@ -41,4 +46,11 @@ h4 {
 img {
     height: auto;
     max-width: 100%;
+}
+
+.vline {
+    width: 2px;
+    height: 100px;
+    background-color: $vertical-line;
+    margin: 0 auto;
 }
