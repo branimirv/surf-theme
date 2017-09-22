@@ -4,13 +4,14 @@
 	<title>Surf Theme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dist/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <!-- PRODUCTION BUILD -->
   <!-- <link rel="stylesheet" href="dist/css/style.min.css"> -->
 </head>
-<body ng-app="surfThemeApp" ng-controller="content" ng-class="{'body__mobile' : toggle}">
+<body ng-app="surfThemeApp" ng-controller="content" class="body" ng-controller="navigation" ng-class="{'body__overflow' : toggle}">
   <div class="container">
       
-    <div class="navigation" ng-controller="navigation" ng-cloak>
+    <div class="navigation"  ng-cloak>
       <div class="navigation__logo">
         <a href="/">
           <svg preserveAspectRatio="xMidYMid" width="16" height="44" viewBox="0 0 16 44">
@@ -18,7 +19,7 @@
             </svg>
         </a>
       </div>
-      <div class="navigation__hamburger">
+      <div class="navigation__hamburger" >
         <svg ng-click="toggle = !toggle" id="Capa_1" x="0px" y="0px" width="25" height="25" viewBox="0 0 73.168 73.168" style="enable-background:new 0 0 73.168 73.168;" xml:space="preserve">
           <path d="M4.242,14.425h64.684c2.344,0,4.242-1.933,4.242-4.324c0-2.385-1.898-4.325-4.242-4.325H4.242 C1.898,5.776,0,7.716,0,10.101C0,12.493,1.898,14.425,4.242,14.425z M68.926,32.259H4.242C1.898,32.259,0,34.2,0,36.584 c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.933,4.242-4.325C73.168,34.2,71.27,32.259,68.926,32.259z M68.926,58.742H4.242C1.898,58.742,0,60.683,0,63.067c0,2.393,1.898,4.325,4.242,4.325h64.684c2.344,0,4.242-1.935,4.242-4.325 C73.168,60.683,71.27,58.742,68.926,58.742z"/>
         </svg>
@@ -39,18 +40,18 @@
           <p class="description" ng-bind-html="data.hero[0].description | trustHtml"></p> 
         </div>
         <div class="hero-slider__bottom">
-          <div class="back">left</div>
+          <span class="fa fa-angle-left"></span>
           <div class="counter">1/5</div>
-          <div class="next">right</div>
+          <span class="fa fa-angle-right"></span>
         </div>
       </div>
       <div class="hero-slider__img">
-        <img ng-src="{{ data.hero[0].image }}" alt="">
+        <img ng-src="{{ data.hero[0].image }}" alt=""> 
       </div>  
     </div>
 
     <div class="qoute" ng-cloak>
-      <h4 class="qoute__description" ></h4>
+      <h4 class="qoute__description" ng-bind-html="data.qoute[0].description | trustHtml"></h4>
       <p class="qoute__author">{{ data.qoute[0].author }}</p>
       <div class="qoute__vline"></div>
     </div>
@@ -61,7 +62,45 @@
         <p class="media__description" ng-bind-html="data.media[0].description | trustHtml"></p>
         <button class="media__button">Read more</button>
       </div>
-      <div class="media__video"></div> 
+      <div class="media__video">
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/t_OZB7gZe9Q?enablejsapi=1&html5=1" frameborder="0" allowfullscreen></iframe>
+          <div class="buttons">
+              <svg class="defs" id="play-button-shape" preserveAspectRatio="xMidYMid" width="122" height="122" viewBox="0 0 122 122">
+                <image xlink:href="data:img/png;base64,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" width="122" height="122"/>
+              </svg>
+
+              <svg class="defs" id="pause-button-shape" width="139" height="139" viewBox="0 0 139 139">
+                
+                <g id="Stop button">
+                <g id="Ellipse" filter="url(#filter0_d)">
+                <use xlink:href="#path0_fill" transform="translate(-383 -240)" fill="#5DA9EF"/>
+                </g>
+                <g id="stop">
+                  <g id="Line">
+                  <use xlink:href="#path1_stroke" transform="matrix(6.12323e-17 1 -1 6.12323e-17 -354 -213)" fill="#FFFFFF"/>
+                  </g>
+                  <g id="Line">
+                  <use xlink:href="#path1_stroke" transform="matrix(4.76252e-17 1 -1 7.87273e-17 -347 -213)" fill="#FFFFFF"/>
+                  </g>
+                </g>
+                </g>
+  
+                <defs>
+
+                <path id="path0_fill" d="M 68 34C 68 52.7777 52.7777 68 34 68C 15.2223 68 0 52.7777 0 34C 0 15.2223 15.2223 0 34 0C 52.7777 0 68 15.2223 68 34Z"/>
+                <path id="path1_stroke" d="M 0 0L 14 0L 14 -3L 0 -3L 0 0Z"/>
+                </defs>
+              </svg>
+                
+      
+              <svg class="button" id="play-button">
+                <use xlink:href="#play-button-shape">
+              </svg>
+              <svg class="button" id="pause-button">
+                <use xlink:href="#pause-button-shape">
+              </svg>
+            </div> 
+      </div> 
     </div>
   </div>
 
