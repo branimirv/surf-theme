@@ -1,0 +1,16 @@
+.defs {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.button {
+    cursor: pointer;
+    &:hover {
+      fill: white; 
+    }
+  }
+  
+  .ytp-large-play-button .ytp-button {
+      display: none;
+  }
