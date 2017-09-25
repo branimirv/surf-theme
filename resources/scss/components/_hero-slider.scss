@@ -1,24 +1,78 @@
 .hero-slider {
-    padding: 20px 0;
-    height: 90vh;
+    height: 70vh;
     position: relative;
-    display: flex;
-    justify-content: space-between;
     @include e('text') {
         position: relative;
-        height: auto;
+        height: 100%;
         z-index: 1;
         display: flex;
         flex-direction: column;
     }
-    @include e('bottom') {
-        z-index: -1;
-    } 
-    @include e('bottom') {
+    @include e('center') {
+        height: 60%;
+        flex-direction: column;
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        .intro {
+            opacity: 0.9;
+            font-family: 'LeagueSpartan';
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 7.33;
+            letter-spacing: 5.4px;
+            text-transform: uppercase;
+            color: rgba(93, 168, 239, 0.9);
+        }
+
+        h1 {
+            font-family: PlayfairDisplay;
+            line-height: 1.03;
+            margin-bottom: 20px;
+            color: #0b0c11;
+            text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
+        }
+
+        .description {
+            font-family: Poppins;
+            line-height: 1.71;
+            letter-spacing: 0.4px;
+            color: #8f8f8f;
+        }
     }
-
+    @include e('bottom') {
+        height: 40%;
+        display: flex;
+        align-items: flex-end;
+        z-index: -1;
+        .fa-angle-left {
+            cursor: pointer;
+            color: #ebebeb;
+        }
+        .fa-angle-right {
+            cursor: pointer;
+            color: #ebebeb;
+        }
+        .counter {
+            padding: 0 10px;
+            font-family: LeagueSpartan;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            .active {color: rgba(93, 168, 239, 0.9);}
+            
+        }
+    } 
     @include e('img') {
-
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1000px;
+        height: 70vh;
+        background-image: linear-gradient(to right, #ffffff, #ffffff);
+        @include mq($until: wide) {
+            width: 100%;
+            height: 70vh;
+        }
     }
 }
